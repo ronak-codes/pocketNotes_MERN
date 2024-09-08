@@ -1,0 +1,44 @@
+.app {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background: #f4f4f4;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .note-group-header {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  .add-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.5em;
+    color: #007bff;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .no-group-selected {
+    text-align: center;
+  }
+  
+  .bottom-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  

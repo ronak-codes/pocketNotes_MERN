@@ -1,0 +1,222 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Prevent body overflow */
+  }
+  
+  .app {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #ffffff; /* White background */
+    border-right: 1px solid #dee2e6;
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Ensure relative positioning for absolute children */
+    height: 100vh; /* Ensure sidebar takes full viewport height */
+  }
+  
+  .note-group-header {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    background-color: #ffffff; /* White background for the header */
+    padding: 10px;
+    border-bottom: 1px solid #dee2e6;
+    font-family: 'Roboto', sans-serif; /* Ensure consistent font family */
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    z-index: 1; /* Ensure it's above other content */
+  }
+  
+  .note-group {
+    flex: 1;
+    background-color: #ffffff; /* White background for note group */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Hide overflow to manage scrolling within child elements */
+  }
+  
+  .note-group-list {
+    flex: 1;
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding-bottom: 60px; /* Space for the add button */
+  }
+  
+  .add-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #16008B;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2; /* Ensure the button is above other content */
+  }
+
+
+  .signout-button{
+    position:absolute;
+    bottom:20px;
+    background-color: #dee2e6;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+
+  
+  .main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa; /* Background color for main content */
+    overflow-y: hidden; /* Prevent scrolling in the main area */
+  }
+
+  .group-padding{
+    padding: 20px;
+  }
+  .no-group-padding{
+    padding: 0px;
+  }
+
+  .no-group-selected{
+    background-color:  #DAE5F5;
+  }
+  
+  .notes-header {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa; /* Background color to ensure the circle stands out */
+  }
+  
+  .header-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    font-weight: bold;
+    border: 2px solid #ffffff; /* Ensure the border color contrasts with background */
+  }
+  
+  .notes-list {
+    flex: 1;
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding-right: 10px;
+    background-color: #ffffff; /* Ensure consistent background color */
+  }
+  
+  .note-card {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid transparent;
+  }
+  
+  .note-editor-container {
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 1px solid #dee2e6;
+  }
+  
+  .note-editor {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .dialog-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .dialog-row{
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px; /* Space between rows */
+  }
+  
+  .color-picker {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .color-circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .color-circle.selected {
+    transform: scale(1.2);
+    border: 2px solid #000;
+  }
+
+
+
+  .no-group-selected {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    background-color:  #DAE5F5;
+    ; /* Match your main background color */
+  }
+  
+  .no-group-selected img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .no-group-selected h1 {
+    margin: 20px 0;
+    font-size: 2rem;
+  }
+  
+  .no-group-selected p {
+    margin: 10px 0;
+  }
+  
+  .no-group-selected .bottom-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    padding: 20px; /* Add some padding for spacing */
+  }
+  
+  .no-group-selected .bottom-text .MuiSvgIcon-root {
+    margin-right: 8px;
+  }
+  
