@@ -107,7 +107,7 @@ const HomePage = () => {
     const data = result.data;
     console.log("check it",data);
 
-    setNotes([...notes,...data]);
+    setNotes([...data]);
 
   };
 
