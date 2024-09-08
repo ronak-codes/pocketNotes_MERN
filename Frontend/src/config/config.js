@@ -1,3 +1,3 @@
 export const config={
-    BASE_URL:"http://localhost:8080"
+    BASE_URL:"https://pocketnotes-backend-epxa.onrender.com"
 }
