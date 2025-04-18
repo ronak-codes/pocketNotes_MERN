@@ -10,7 +10,7 @@ const NoteGroup = ({ groups, onGroupSelect }) => {
     <div className="note-group">
       <List className="note-group-list">
         {groups.map((group, index) => (
-          <ListItem ButtonBase key={index} onClick={() => onGroupSelect(group)}>
+          <ListItem ButtonBase key={index} onClick={() => onGroupSelect(group)} style={{cursor:'pointer'}}>
             <ListItemIcon>
               <Avatar style={{ backgroundColor: group.color }}>
                 {getInitials(group.title)}
